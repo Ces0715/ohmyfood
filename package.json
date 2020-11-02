@@ -1,0 +1,22 @@
+{
+  "name": "nodesass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "node-sass": "sass ./public/scss/style.scss:./public/css/style.css --watch --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist":"last 4 versions",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ces0715/ohmyfoodsass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ces0715/ohmyfoodsass/issues"
+  },
+  "homepage": "https://github.com/Ces0715/ohmyfoodsass#readme",
+  "description": ""
+}

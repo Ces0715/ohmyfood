@@ -1,0 +1,203 @@
+#container3 {
+    @include container;
+    background-color: $bgcolor3;
+    font-family: "Kalam", cursive;
+    color: black;
+    & h3:before,
+    h3:after {
+        background: $colormenu3b;
+    }
+
+    & a {
+        display: inline;
+        position: relative;
+        color: black;
+        text-decoration: none;
+    }
+    & a:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 0%;
+        left: 0px;
+        height: 4px;
+        transition: 0.5s cubic-bezier(0.72, -0.01, 0.19, 0.92);
+        background: $secondaryColor;
+    }
+    a:hover:after {
+        width: 100%;
+    }
+}
+
+#titre3 {
+    @include titre;
+    & h2 {
+        font-family: "Dancing Script", cursive;
+        font-weight: 300;
+        font-size: 120px;
+        text-align: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: -webkit-linear-gradient(left, $colormenu3a, $colormenu3b);
+    }
+}
+
+.commencer {
+    & h3:before,
+    h3:after {
+        width: 600px;
+    }
+}
+
+#commencer {
+    @include menu1;
+    & p {
+        font-size: 35px;
+    }
+}
+
+.continuer {
+    & h3:before,
+    h3:after {
+        width: 600px;
+    }
+}
+
+#continuer {
+    @include menu1;
+    & p {
+        font-size: 35px;
+    }
+}
+
+.terminer {
+    & h3:before,
+    h3:after {
+        width: 600px;
+    }
+}
+
+#terminer {
+    @include menu1;
+    & p {
+        font-size: 35px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    body {
+        height: 2600px;
+    }
+    section {
+        height: 2400px;
+    }
+
+    #container3 {
+        @include containersmedia;
+        & p {
+            font-size: 35px;
+        }
+        & h3 {
+            font-size: 30px;
+        }
+    }
+
+    #titre3 {
+        @include titre1media;
+        & h2 {
+            padding-bottom: 0;
+            margin-bottom: 10px;
+            font-size: 80px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .commencer {
+        & h3:before,
+        h3:after {
+            width: 180px;
+        }
+    }
+
+    #commencer {
+        width: 90%;
+        margin-left: 30px;
+        margin-right: 0px;
+        padding-bottom: 20px;
+    }
+
+    .continuer {
+        & h3:before,
+        h3:after {
+            width: 180px;
+        }
+    }
+
+    #continuer {
+        width: 90%;
+        margin-left: 30px;
+        margin-right: 0px;
+        padding-bottom: 20px;
+    }
+
+    .terminer {
+        & h3:before,
+        h3:after {
+            width: 200px;
+        }
+    }
+
+    #terminer {
+        width: 90%;
+        margin-left: 30px;
+        margin-right: 0px;
+        padding-bottom: 20px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    body {
+        height: 2400px;
+        width: 100%;
+    }
+    section {
+        height: 2200px;
+    }
+
+    #container3 {
+        @include containerphone;
+        height: 1800px;
+        & h3 {
+            font-size: 20px;
+            color: $colormenu3a;
+        }
+        & h3:before,
+        h3:after {
+            height: 3px;
+            width: 300px;
+        }
+        h3:before {
+            margin-right: 0rem;
+        }
+        h3:after {
+            margin-left: 0rem;
+        }
+    }
+
+    #titre3 {
+        font-size: 30px;
+        & h2 {
+            font-size: 35px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    #commencer, 
+    #continuer, 
+    #terminer{
+        @include phone;
+    }
+}

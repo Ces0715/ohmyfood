@@ -1,0 +1,193 @@
+#container4 {
+    @include container;
+    background-color: $bgcolor4;
+    font-family: "Paprika", cursive;
+    & h3:before,
+    h3:after {
+        background: $colormenu4a;
+    }
+
+    & a {
+        display: inline;
+        position: relative;
+        color: $secondaryColor;
+        text-decoration: none;
+    }
+    & a:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 0%;
+        left: 0px;
+        height: 4px;
+        transition: 0.5s cubic-bezier(0.72, -0.01, 0.19, 0.92);
+        background: $secondaryColor;
+    }
+    a:hover:after {
+        width: 100%;
+    }
+    & p {
+        font-size: 25px;
+    }
+}
+
+#titre4 {
+    @include titre;
+    & h2 {
+        font-family: "Kaushan Script", cursive;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: -webkit-linear-gradient(left, $colormenu4a, $colormenu4b);
+        font-weight: 400;
+    }
+}
+
+.esquisse {
+    & h3:before,
+    h3:after {
+        width: 45rem;
+    }
+}
+
+#esquisse {
+    @include menu1;
+}
+
+.oeuvre {
+    & h3:before,
+    h3:after {
+        width: 42rem;
+        background: $colormenu4a;
+    }
+}
+
+#oeuvre {
+    @include menu1;
+}
+
+.sommet {
+    & h3:before,
+    h3:after {
+        width: 40rem;
+        background: $colormenu4a;
+    }
+}
+
+#sommet {
+    @include menu1;
+}
+
+@media all and (max-width: 1024px) {
+    body {
+        height: 2200px;
+    }
+    section {
+        height: 2000px;
+    }
+
+    #container4 {
+        margin-left: 0px;
+        margin-right: 0;
+        margin-top: 0px;
+        height: 1700px;
+        width: 100%;
+        & p {
+            font-size: 22px;
+        }
+    }
+
+    #titre4 {
+        @include titre1media;
+        & h2 {
+            font-size: 80px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .esquisse {
+        & h3:before,
+        h3:after {
+            width: 15rem;
+        }
+    }
+
+    #esquisse {
+        width: 95%;
+        margin-left: 25px;
+        margin-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 8px;
+    }
+
+    .oeuvre {
+        & h3:before,
+        h3:after {
+            width: 10rem;
+        }
+    }
+
+    #oeuvre {
+        width: 95%;
+        padding-left: 8px;
+        margin-left: 20px;
+        margin-right: 10px;
+        padding-bottom: 20px;
+    }
+
+    .sommet {
+        & h3:before,
+        h3:after {
+            width: 8rem;
+        }
+    }
+
+    #sommet {
+        width: 95%;
+        padding-left: 8px;
+        margin-left: 20px;
+        margin-right: 1px;
+        padding-bottom: 20px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    #container4 {
+        @include containerphone;
+        height: 2000px;
+        & h3 {
+            font-size: 20px;
+        }
+        & h3:before,
+        h3:after {
+            height: 3px;
+            width: 300px;
+        }
+        h3:before {
+            margin-right: 0rem;
+        }
+        h3:after {
+            margin-left: 0rem;
+        }
+    }
+
+    #titre4 {
+        font-size: 40px;
+        & h2 {
+            font-size: 40px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    #esquisse,
+    #oeuvre,
+    #sommet {
+        @include phone;
+    }
+}

@@ -1,0 +1,51 @@
+#containerml {
+    margin-top: 140px;
+    margin-left: 100px;
+    margin-right: 10px;
+    height: 2500px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik';
+        & h2{
+            text-align: center;
+        }
+        & h3{
+            text-align: center;
+        }
+        & p{
+            text-align: justify;
+            margin-bottom: 40px;
+            font-family: sans-serif;
+        }
+}
+
+@media all and (max-width: 1024px){  
+    #containerml{ 
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 10px;
+
+    & p{
+        
+        font-size: 20px;
+    }
+}
+}
+
+@media all and (max-width: 480px){  
+    #containerml{ 
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 0px;
+    width:80%;
+
+    & p{
+        text-align: justify;
+        margin-bottom: 50px;
+        font-size: 15px;
+    }
+}
+}
+
+

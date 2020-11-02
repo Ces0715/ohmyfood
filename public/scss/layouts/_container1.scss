@@ -1,0 +1,274 @@
+#container1 {
+    @include container;
+    background-color: $bgcolor1;
+    height: 2500px;
+    font-family: "Paprika", cursive;
+    & p {
+        font-weight: bold;
+    }
+    & .nomplat p {
+        font-weight: normal;
+    }
+}
+
+#titre1 {
+    @include titre;
+    color: $secondaryColor;
+    & h2 {
+        color: $secondaryColor;
+        margin-top: 2px;
+        font-family: "Devonshire", cursive;
+        font-weight: 400;
+        font-size: 100px;
+    }
+    & img {
+        width: 100px;
+        height: 100px;
+        padding-top: 70px;
+    }
+}
+
+h3 {
+    font-family: "Paprika", cursive;
+    font-size: 40px;
+    text-align: center;
+    @include a;
+    & a {
+        color: $secondaryColor;
+    }
+    & a:after {
+        background-color: $secondaryColor;
+    }
+}
+
+h3:before,
+h3:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 5px;
+    background: $secondaryColor;
+}
+
+h3:before {
+    margin-right: 2rem;
+}
+h3:after {
+    margin-left: 2rem;
+}
+
+.prelude {
+    & h3:before,
+    h3:after {
+        width: 740px;
+    }
+}
+
+#prelude {
+    @include menu1;
+}
+
+.point {
+    & h3:before,
+    h3:after {
+        width: 680px;
+    }
+}
+
+#point {
+    @include menu1;
+}
+
+.mouvement {
+    & h3:before,
+    h3:after {
+        width: 650px;
+    }
+}
+
+#mouvement {
+    text-align: center;
+    font-family: "Paprika", cursive;
+    color: $secondaryColor;
+    margin-left: 110px;
+    margin-right: 50px;
+    width: 85%;
+    padding-bottom: 100px;
+    & p {
+        width: 70%;
+        margin-left: 70px;
+        text-align: left;
+        font-size: 25px;
+        line-height: 60px;
+    }
+}
+
+#note2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    color: $secondaryColor;
+    font-family: "Devonshire", cursive;
+    font-size: 40px;
+    & img {
+        width: 60px;
+        height: 60px;
+        padding-right: 20px;
+        padding-top: 5px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    body {
+        height: 1000px;
+    }
+    section {
+        height: 800px;
+    }
+
+    #container1 {
+        @include containersmedia;
+        & h3 {
+            font-size: 30px;
+        }
+    }
+
+    #titre1 {
+        @include titre1media;
+        & img {
+            width: 50px;
+            height: 50px;
+            padding-top: 10px;
+        }
+    }
+
+    .prelude {
+        & h3:before,
+        h3:after {
+            width: 200px;
+        }
+    }
+
+    #prelude {
+        @include tablet;
+        & li {
+            display: flex;
+            flex-direction: row;
+            width: 95%;
+        }
+    }
+
+    .point {
+        & h3:before,
+        h3:after {
+            width: 180px;
+        }
+    }
+
+    #point {
+        @include tablet;
+        & li {
+            display: flex;
+            flex-direction: row;
+            width: 95%;
+        }
+    }
+
+    .mouvement {
+        & h3:before,
+        h3:after {
+            width: 180px;
+        }
+    }
+
+    #mouvement {
+        @include tablet;
+        padding-right: 30px;
+    }
+
+    #note2 {
+        font-size: 20px;
+
+        & img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 30px;
+        }
+        & h2 {
+            margin-top: 15px;
+            font-size: 50px;
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    #container1 {
+        @include containerphone;
+        height: 2200px;
+        & h3 {
+            font-size: 20px;
+        }
+        & h3:before,
+        h3:after {
+            height: 3px;
+            width: 300px;
+        }
+        h3:before {
+            margin-right: 0rem;
+        }
+        h3:after {
+            margin-left: 0rem;
+        }
+    }
+
+    #titre1 {
+        margin-bottom: 0;
+        & h2 {
+            font-size: 40px;
+        }
+        & img {
+            width: 35px;
+            height: 35px;
+            padding-top: 5px;
+        }
+    }
+
+    #prelude {
+        @include phone;
+        & li {
+            margin-right: 2px;
+            margin-left: 0px;
+        }
+    }
+
+    #point {
+        @include phone;
+        & li {
+            margin-right: 2px;
+            margin-left: 0px;
+        }
+    }
+
+    #mouvement {
+        padding-right: 0;
+        @include phone;
+        & p {
+            margin-left: 0;
+            padding-right: 0;
+            margin-right: 0;
+        }
+    }
+
+    #note2 {
+        & img {
+            width: 30px;
+            height: 30px;
+            padding-top: 15px;
+            padding-right: 10px;
+        }
+        & h2 {
+            font-size: 25px;
+        }
+    }
+}
